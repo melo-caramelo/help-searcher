@@ -1,0 +1,107 @@
+@font-face {
+  font-family: modern;
+  src: url(/styles/fonts/quicksand/Quicksand-Regular.otf);
+}
+
+@font-face {
+  font-family: media;
+  src: url(/styles/fonts/ExonRegular-0WjEd.otf);
+}
+
+@font-face {
+  font-family: destaque;
+  src: url(/styles/fonts/Back\ to\ school.otf);
+}
+
+body {
+  font-family: 'modern';
+  background-color: #F9F9F9;
+}
+
+.box {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(78, 78, 78, 0.9);
+  padding: 15px;
+  border-radius: 15px;
+  width: 90%;
+}
+
+fieldset {
+  border: 2px solid #7858A6;
+  border-radius: 2%;
+
+}
+
+.bigtitle {
+  color: black;
+}
+
+legend {
+  border: 1px solid #7858A6;
+  padding: 10px;
+  text-align: center;
+  background-color: #7858A6;
+  border-radius: 8px;
+  width: 400px;
+}
+
+.inputBox {
+  position: relative;
+}
+
+.inputUser {
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  width: 100%;
+  letter-spacing: 2px;
+}
+
+.labelInput {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.inputUser:focus~.labelInput,
+.inputUser:valid~.labelInput {
+  top: -20px;
+  font-size: 12px;
+  color: #7858A6;
+}
+
+.service-type {
+  text-align: center;
+}
+
+#data_nascimento {
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+}
+
+#submit {
+  background-image: linear-gradient(to right, #7858A6, #7858A6);
+  width: 100%;
+  border: none;
+  padding: 15px;
+  color: black;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#submit:hover {
+  background-image: linear-gradient(to right, #7858A6, #7858A6);
+}
