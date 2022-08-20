@@ -42,3 +42,32 @@ const mobileNavbar = new MobileNavbar(
   ".nav-list li",
 );
 mobileNavbar.init();
+
+function ready(fn) {
+  if (document.readyState != 'loading'){
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
+
+
+ready(() => {
+  document.getElementById("sub").addEventListener("click", (ev) => {
+      ev.preventDefault();
+      document.getElementsByName("genero").forEach(
+          (item, key) => { 
+              //console.log(item.value, item.checked);
+              if (item.checked) {
+                  if (item.value == "feminino") {
+                      document.location = "/helpsearch/pages/about.html"
+                  } else if (item.value == "masculino") {
+                      document.location = "/pages/contact.html"
+                  } else if (item.value == "outro") {
+                      document.location = "http://uol.com.br/"
+                  }
+              }
+          }
+      );
+  });
+});
